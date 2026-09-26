@@ -1,0 +1,22 @@
+name: Verify export
+
+# Independent check of every pushed export: file hashes, line counts and Merkle root of the newest manifest.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions: { contents: read }
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Verify the newest manifest
+        run: |
+          if ls manifests/*.json > /dev/null 2>&1; then node scripts/verify-export.mjs; else echo "No export yet."; fi
