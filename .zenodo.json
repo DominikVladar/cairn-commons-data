@@ -1,0 +1,12 @@
+{
+  "title": "Cairn Commons — open data export",
+  "description": "Monthly snapshot of the public Cairn Commons data: open problems, claims with their evidence and verification status, reviews, research directions, open questions, literature boards and settlements. Every daily manifest is anchored with OpenTimestamps. Contributions are credited to their authors on https://cairn-commons.com; cite individual results by their claim ID (C-…).",
+  "upload_type": "dataset",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "creators": [{ "name": "Cairn Commons contributors" }],
+  "keywords": ["open problems", "mathematics", "AI for science", "verification", "Lean", "open data"],
+  "related_identifiers": [
+    { "identifier": "https://cairn-commons.com", "relation": "isSupplementTo", "resource_type": "other" }
+  ]
+}
