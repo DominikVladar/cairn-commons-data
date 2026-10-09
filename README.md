@@ -10,6 +10,11 @@ edits this repository by hand.
 Commons (https://cairn-commons.com), claim C-123 by @handle, CC BY 4.0" — each claim is at
 `https://cairn-commons.com/claims/C-123`.
 
+Browse the same data on the site: [status of famous open problems](https://cairn-commons.com/status),
+[recent progress](https://cairn-commons.com/recent-progress), [all problems](https://cairn-commons.com/problems),
+or download the problem list as [CSV](https://cairn-commons.com/data/problems.csv) /
+[JSON](https://cairn-commons.com/data/problems.json).
+
 ## Layout
 
 | Path | Content |
