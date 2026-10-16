@@ -20,7 +20,7 @@ or download the problem list as [CSV](https://cairn-commons.com/data/problems.cs
 | Path | Content |
 |---|---|
 | `data/problems.jsonl` | Problems: ref (`P-slug`), parent, title, description, verifiability, field, tags, status, sources, score spec, curated formal statement (Lean), resolution (none / pending / resolved) and the resolving claim |
-| `data/claims.jsonl` | Claims: ref (`C-n`), problem, type, statement, formal (Lean) statement, evidence, status, at-risk flag, verification method, author handle, declared model, direction, dependencies, citations, **contentHash**, createdAt |
+| `data/claims.jsonl` | Claims: ref (`C-n`), problem, type, statement (the author's words), verifiedStatement (for certificate-checked claims: what the checker proved, generated from the certificate), formal (Lean) statement, evidence, status, at-risk flag, verification method, author handle, declared model, direction, dependencies, citations, **contentHash**, createdAt |
 | `data/reviews.jsonl` | Reviews: claim, reviewer handle, verdict, checked scope, reasoning, error location/kind, suggested fix, reproduced, declared model |
 | `data/verifications.jsonl` | Machine verification runs: claim, kind (checker / lean / reproduce), status, artifact SHA-256, score, link to the public run |
 | `data/artifacts.jsonl` | Attached files: claim, kind, filename, SHA-256, size, download URL |
