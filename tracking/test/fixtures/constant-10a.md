@@ -1,0 +1,71 @@
+# The real Grothendieck constant
+
+## Description of constant
+
+$C\_{10}$ is the **real Grothendieck constant** $K\_{G}^{\mathbb R}$.
+
+It is the smallest constant $C$ such that for every $m,n \ge 1$ and every real matrix
+
+$A=(a_{ij}) \in \mathbb{R}^{m\times n}$ one has
+
+$$
+\max_{\substack{u_1,\dots,u_{m},  v_{1},\dots,v_{n} \in S^{\infty}}}
+\ \sum_{i=1}^m \sum_{j=1}^n a_{ij} \langle u_{i}, v_{j}\rangle
+\ \le\ 
+C
+\max_{\varepsilon_{1},\dots,\varepsilon_{m}, \delta_{1},\dots,\delta_{n}  = \pm 1}
+\ \sum_{i=1}^m \sum_{j=1}^n a_{ij} \varepsilon_{i} \delta_{j}.
+$$
+
+Here $S^{\infty}$ denotes the unit sphere of a real Hilbert space (equivalently, one may take
+$u_{i},v_{j} \in S^{d-1}$ for some sufficiently large finite dimension $d$).
+
+## Known upper bounds
+
+| Bound | Reference | Comments |
+| ----- | --------- | -------- |
+| $\sinh(\pi/2) \approx 2.30130$ | [G1953] | Grothendieck’s original upper bound |
+| $2.261$ | [R1974] | Improvement of the original upper bound |
+| $\dfrac{\pi}{2\ln(1+\sqrt{2})} \approx 1.782214$ | [K1979] | Krivine’s bound; best known **explicit** numerical upper bound |
+| $< \dfrac{\pi}{2\ln(1+\sqrt{2})}$ | [BMMN2011] | Strict improvement over Krivine’s bound |
+| $< \dfrac{\pi}{2\ln(1+\sqrt{2})} - 10^{-5}$ | [Hei26b] | $10^{-5}$ improvement over Krivine's bound |
+| $< \dfrac{\pi}{2\ln(1+\sqrt{2})} - 6.039\times 10^{-5}$ | [LSXCKKM26] | $6.039\times 10^{-5}$ improvement over Krivine's bound |
+| $< \dfrac{\pi}{2\ln(1+\sqrt{2})} - 10^{-4}$ | [SLXCKKM26] | Same team; via the first *asymptotic* Krivine-type rounding scheme (previous works only considered low-dimensional schemes). |
+| $1.7813^\*$ | [P2026] | Computer-assisted bound; Theorem 1.1. Explicit degree-11 Hermite threshold and degree-51 signed correlation polynomial. The author supplies Arb interval certificates; no independent replay is recorded here. |
+
+## Known lower bounds
+
+| Bound | Reference | Comments |
+| ----- | --------- | -------- |
+| $1$ | Trivial | Follows from the definitions |
+| $\dfrac{\pi}{2} \approx 1.57080$ | [G1953] | Grothendieck’s original lower bound |
+| $K_{DR} \approx 1.67696\ldots$ | [Dav1984], [Ree1991] | Davie–Reeds lower bound |
+| $K_{DR} + 10^{-26}$ | [Hei26] | Concurrent 2026 improvement over the Davie–Reeds bound |
+| $K_{DR} + 10^{-12}$ | [JM26] | Strict improvement over the Davie–Reeds bound |
+| $\dfrac{6\pi}{11}\approx 1.71360$ | [SLXCKKM26] | Major jump over the Davie–Reeds anchor $\approx 1.67696$; proved by establishing asymptotic limitations of Krivine schemes rather than by constructing explicit gap instances (as all prior lower bounds did).  Together with the upper bound above, this determines the tenths digit of $K_G^{\mathbb R}$ to be $7$. |
+
+## Additional comments and links
+
+- Krivine conjectured that $C_{10} = \frac{\pi}{2\ln(1+\sqrt{2})}$, but this was disproved in [BMMN2011] by showing the inequality is strict.
+- A standard reference survey is [Pis2012].
+- [Wikipedia page on the Grothendieck inequality](https://en.wikipedia.org/wiki/Grothendieck_inequality)
+- [JM26] proves that the Davie–Reeds lower bound is not optimal, using a perturbative analysis of the Davie–Reeds operator to establish $K_{G}^{\mathbb R} \ge K_{DR} + 10^{-12}$; the paper also notes concurrent work [Hei26] proving the weaker bound $K_{G}^{\mathbb R} \ge K_{DR} + 10^{-26}$.
+- The perturbative strategy of [Hei26] and [JM26] could possibly be used to improve the complex Grothendieck constant lower bound.
+- [Hei26b] uses thresholding by degree 3 Hermite polynomials.  [LSXCKKM26] upgrades this to a degree 9 thresholding mixed with hyperplane thresholding.
+- [SLXCKKM26] (by the same 7-author team as [LSXCKKM26], with author order permuted so Saha appears first) settles the tenths digit of $K_G^{\mathbb R}$: $1.71360 \le K_G^{\mathbb R} \le 1.78212$, so the first decimal digit is $7$.  Both bounds are asymptotic — the lower bound is the first not obtained via an explicit low-dimensional gap instance, and the upper bound is the first obtained via an asymptotic (rather than low-dimensional) Krivine-type rounding scheme.  The authors state that the bounds "were discovered by a long-running collaborative effort of humans and a long-horizon AI research system that we engineered".
+
+## References
+
+- [BMMN2011] Braverman, Mark; Makarychev, Konstantin; Makarychev, Yury; Naor, Assaf. *The Grothendieck constant is strictly smaller than Krivine's bound.* Forum of Mathematics, Pi, Volume 1, 2013, e4. [arXiv:1103.6161](https://arxiv.org/abs/1103.6161)
+- [Dav1984] Davie, A. M. *Lower bound for $K_{G}$.* Unpublished note (1984).
+- [G1953] Grothendieck, Alexandre. *Résumé de la théorie métrique des produits tensoriels topologiques.* Bol. Soc. Mat. São Paulo **8** (1953), 1–79.
+- [Hei26] Heilman, Steven. *A lower bound for Grothendieck's constant.* (2026) [arXiv:2603.22616](https://arxiv.org/abs/2603.22616)
+- [Hei26b] Heilman, Steven. *An Upper Bound on Grothendieck's constant.* (2026) [arXiv:2606.00247](https://arxiv.org/abs/2606.00247)
+- [JM26] Jones, Chris; Malavolta, Giulio. *The Grothendieck constant is strictly larger than Davie-Reeds' bound.* (2026) [arXiv:2603.30039](https://arxiv.org/abs/2603.30039)
+- [K1979] Krivine, Jean-Louis. *Constantes de Grothendieck et fonctions de type positif sur les sphères.* Advances in Mathematics **31** (1979), 16–30.
+- [LSXCKKM26] Li, Alan; Saha, Rahul; Xue, Anton; Chaudhuri, Swarat; Klivans, Adam; Kothari, Pravesh K; Meka, Raghu. *The Grothendieck Constant is Less Than $\frac{\pi}{2\log(1+\sqrt{2})} - 10^{-5}$* [arXiv:2606.03991](https://arxiv.org/abs/2606.03991)
+- [SLXCKKM26] Saha, Rahul; Li, Alan; Xue, Anton; Chaudhuri, Swarat; Klivans, Adam; Kothari, Pravesh K; Meka, Raghu. *New Lower and Upper Bounds for the Grothendieck Constant.* [arXiv:2608.11158](https://arxiv.org/abs/2608.11158) (2026).
+- [Pis2012] Pisier, Gilles. *Grothendieck’s theorem, past and present.* Bull. Amer. Math. Soc. (N.S.) **49** (2012), 237–323. [arXiv:1101.4195](https://arxiv.org/abs/1101.4195)
+- [Ree1991] Reeds, James A. *A new lower bound on the real Grothendieck constant.* Unpublished manuscript (1991).
+- [R1974] Rietz, Ronald E. *A proof of the Grothendieck inequality.* Israel J. Math. **19** (1974), 271–276.
+- [P2026] Peng, Bo. *A computer-assisted upper bound of 1.7813 for the real Grothendieck constant.* [arXiv:2609.20074v1](https://arxiv.org/abs/2609.20074v1), 17 September 2026.

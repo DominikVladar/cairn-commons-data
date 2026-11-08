@@ -1,0 +1,50 @@
+name: Track progress
+
+# Reads the current state of tracked problems from public sources (tracking/run.mjs) and commits what changed:
+# tracking/facts.json, tracking/changes/, tracking/state/, tracking/health.json. Deterministic collectors only
+# (parsers of structured pages and data files); no secrets, no access to the platform's database. The platform
+# reads the committed files.
+on:
+  schedule:
+    - cron: "17 6,18 * * *"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Comma-separated sources (empty: all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: track
+  cancel-in-progress: false
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: tracking/package-lock.json
+      - run: npm ci --prefix tracking
+      - run: npm test --prefix tracking
+      - name: Collect
+        run: node tracking/run.mjs ${{ inputs.only && format('--only {0}', inputs.only) || '' }}
+      - name: Commit (rebases onto the daily export if it was pushed meanwhile)
+        run: |
+          git config user.name "cairn-commons-tracker"
+          git config user.email "tracker@users.noreply.github.com"
+          git add tracking
+          git diff --cached --quiet && { echo "Nothing changed."; exit 0; }
+          git commit -q -m "Tracked progress $(date -u +'%F %H:%M')"
+          for i in 1 2 3 4 5; do
+            git pull -q --rebase && git push -q && exit 0
+            sleep $((i * 10))
+          done
+          echo "::error::Could not push the tracking update."; exit 1

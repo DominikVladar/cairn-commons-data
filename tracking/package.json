@@ -1,0 +1,15 @@
+{
+  "name": "cairn-commons-tracker",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic collectors of the current state of open problems tracked by Cairn Commons.",
+  "scripts": {
+    "track": "node run.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "yaml": "2.8.1"
+  },
+  "engines": { "node": ">=22" },
+  "license": "MIT"
+}
