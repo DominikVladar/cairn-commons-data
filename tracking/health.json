@@ -1,0 +1,45 @@
+{
+ "checkedAt": "2026-11-09T06:44:13.373Z",
+ "sources": {
+  "covering-repository": {
+   "blocked": true,
+   "error": "https://www.coveringrepository.com/systems.aspx?li=2: blocked by the site's bot protection (HTTP 403); not retried",
+   "failedAt": "2026-11-09T06:44:13.373Z",
+   "ok": false
+  },
+  "erdosproblems": {
+   "checkedAt": "2026-11-09T06:44:13.373Z",
+   "ok": true,
+   "parser": 1,
+   "rev": "acb2d48c137bbfb9dc73f941b08c4e3c90c70ba8",
+   "rows": 1221,
+   "seconds": 1,
+   "warnings": []
+  },
+  "formal-conjectures": {
+   "checkedAt": "2026-11-09T06:44:13.373Z",
+   "ok": true,
+   "parser": 3,
+   "rev": "3afb9beda5bcb9933e6e10276e87f8ccfd851222",
+   "rows": 756,
+   "seconds": 1,
+   "warnings": [
+    "FormalConjectures/ErdosProblems/80.lean: Erdos80.erdos_80 not found among the categorised statements",
+    "FormalConjectures/OEIS/185895.lean: OeisA185895.conjecture2 not found among the categorised statements",
+    "FormalConjectures/Paper/CardinalityLindelof.lean: CardinalityLindelof.HasG not found among the categorised statements",
+    "FormalConjectures/Wikipedia/PolyTimeFunctions.lean: no longer in the repository (moved or removed)"
+   ]
+  },
+  "optimization-constants": {
+   "checkedAt": "2026-11-09T06:44:13.373Z",
+   "ok": true,
+   "parser": 3,
+   "rev": "87b4ebbd426ff8db597a2004cc45da17903bdcf2",
+   "rows": 107,
+   "seconds": 10,
+   "warnings": [
+    "76a: no bounds table found"
+   ]
+  }
+ }
+}
