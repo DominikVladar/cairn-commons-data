@@ -23,7 +23,7 @@ export function trackingTargets(problems) {
       if (m) {
         const path = decodeURIComponent(m[1]);
         // The Lean statement the problem is about ("type_of% @Erdos10.erdos_10" → Erdos10.erdos_10).
-        const target = /@([\w.'«»]+)/.exec(p.formalStatement ?? "")?.[1] ?? null;
+        const target = /@([^\s()]+)/.exec(p.formalStatement ?? "")?.[1] ?? null;
         const list = t.formalConjectures.get(path) ?? [];
         if (!list.some((x) => x.ref === p.ref)) list.push({ ref: p.ref, target });
         t.formalConjectures.set(path, list.sort((a, b) => a.ref.localeCompare(b.ref)));

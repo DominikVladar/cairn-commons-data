@@ -40,7 +40,7 @@ const SOURCES = {
   "covering-repository": async () => {
     const statePath = join(HERE, "state", "covering.json");
     const prev = readJson(statePath, null);
-    const r = await collectCovering(targets.covering, prev && { ...prev.meta, cells: prev.cells }, today);
+    const r = await collectCovering(targets.covering, prev && { ...prev.meta, cells: prev.cells }, today, now.toISOString());
     writeIfChanged(statePath, serializeCoveringState(r.state));
     return r;
   },

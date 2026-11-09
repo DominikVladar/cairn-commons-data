@@ -7,7 +7,7 @@ import { get } from "../lib/util.mjs";
 import { parseCoveringGrid } from "./covering-parse.mjs";
 
 const ZENODO_CONCEPT = "10779736";
-export const VERSION = 1;
+export const VERSION = 2;
 const FEED = "https://www.coveringrepository.com/systems.aspx?li=2";
 export const cellKey = (v, k, t) => `C(${v},${k},${t})`;
 
@@ -40,7 +40,7 @@ export function applyFeed(cells, rows) {
   return events;
 }
 
-export async function collectCovering(problems, prev, today) {
+export async function collectCovering(problems, prev, today, nowIso = new Date().toISOString()) {
   const state = prev?.cells ? structuredClone(prev) : null;
   const warnings = [];
   let s = state;
@@ -57,17 +57,35 @@ export async function collectCovering(problems, prev, today) {
       for (const [k, c] of Object.entries(s.cells)) if (c[4] === "feed" && (!cells[k] || c[0] < cells[k][0])) cells[k] = c;
       warnings.push(`baseline replaced by archive record ${latest.id}`);
     }
-    s = { archive: { record: String(latest.id), version: latest.metadata?.version ?? null, doi: latest.doi ?? null }, feedSince: s?.feedSince ?? today, lastFeed: s?.lastFeed ?? null, cells };
+    s = {
+      archive: { record: String(latest.id), version: latest.metadata?.version ?? null, doi: latest.doi ?? null },
+      feedSince: s?.feedSince ?? null,
+      lastFeed: s?.lastFeed ?? null,
+      feedReadAt: s?.feedReadAt ?? null,
+      cells,
+    };
   }
-  const html = await get(FEED);
-  const { rows, skipped, grid } = parseCoveringGrid(html);
-  if (!grid || rows.length === 0) throw new Error("the improvements page has no parsable rows; the layout may have changed");
-  if (skipped) warnings.push(`${skipped} rows of the improvements page did not parse`);
-  const oldest = rows.reduce((m, r) => (r.date < m ? r.date : m), "9999");
-  if (s.lastFeed && oldest > s.lastFeed)
-    warnings.push(`possible gap: the improvements page starts on ${oldest}, after the previous read (${s.lastFeed}); improvements in between may be missing`);
-  const events = applyFeed(s.cells, rows);
-  s.lastFeed = rows.reduce((m, r) => (r.date > m ? r.date : m), s.lastFeed ?? "0000");
+  // The live improvements page. If it cannot be read (e.g. a bot check answers instead), the archive baseline and
+  // the improvements seen before still stand; the failure is reported, not worked around.
+  let events = [];
+  const feed = { ok: false, readAt: s.feedReadAt ?? null };
+  try {
+    const html = await get(FEED);
+    const { rows, skipped, grid } = parseCoveringGrid(html);
+    if (!grid || rows.length === 0) throw new Error("the improvements page has no parsable rows; the layout may have changed");
+    if (skipped) warnings.push(`${skipped} rows of the improvements page did not parse`);
+    const oldest = rows.reduce((m, r) => (r.date < m ? r.date : m), "9999");
+    if (s.lastFeed && oldest > s.lastFeed)
+      warnings.push(`possible gap: the improvements page starts on ${oldest}, after the previous read (${s.lastFeed}); improvements in between may be missing`);
+    events = applyFeed(s.cells, rows);
+    s.lastFeed = rows.reduce((m, r) => (r.date > m ? r.date : m), s.lastFeed ?? "0000");
+    s.feedSince ??= today;
+    s.feedReadAt = nowIso;
+    Object.assign(feed, { ok: true, readAt: nowIso, rows: rows.length });
+  } catch (e) {
+    Object.assign(feed, { ok: false, blocked: !!e.blocked, error: String(e.message ?? e).slice(0, 300) });
+    warnings.push(`live improvements page not read: ${feed.error}`);
+  }
 
   const feedCells = Object.entries(s.cells).filter(([, c]) => c[4] === "feed");
   const newest = feedCells.sort((a, b) => b[1][3].localeCompare(a[1][3]) || a[0].localeCompare(b[0]))[0];
@@ -75,13 +93,14 @@ export async function collectCovering(problems, prev, today) {
   for (const problem of problems) {
     const base = { problem, source: "covering-repository", holder: null, date: null, url: "https://www.coveringrepository.com" };
     facts.push({ ...base, key: "cells", label: "Parameter sets (v,k,t) with a best known covering", value: String(Object.keys(s.cells).length), num: Object.keys(s.cells).length });
-    facts.push({
-      ...base,
-      key: "tracked-improvements",
-      label: `Improvements seen since tracking started (${s.feedSince})`,
-      value: String(feedCells.length),
-      num: feedCells.length,
-    });
+    if (s.feedSince)
+      facts.push({
+        ...base,
+        key: "tracked-improvements",
+        label: `Improvements seen since tracking started (${s.feedSince})`,
+        value: String(feedCells.length),
+        num: feedCells.length,
+      });
     if (newest)
       facts.push({
         ...base,
@@ -113,7 +132,12 @@ export async function collectCovering(problems, prev, today) {
     url: FEED,
     kind: "record",
   })));
-  return { health: { rev: s.archive.record, rows: rows.length, warnings, lastFeed: s.lastFeed }, facts, state: s, events: cellEvents };
+  return {
+    health: { rev: s.archive.record, rows: Object.keys(s.cells).length, warnings, lastFeed: s.lastFeed, feed },
+    facts,
+    state: s,
+    events: cellEvents,
+  };
 }
 
 /** One line per cell, so that a daily diff shows exactly the cells that changed. */
@@ -123,7 +147,7 @@ export function serializeCoveringState(s) {
     const pb = b.match(/\d+/g).map(Number);
     return pa[2] - pb[2] || pa[1] - pb[1] || pa[0] - pb[0];
   });
-  const head = JSON.stringify({ archive: s.archive, feedSince: s.feedSince, lastFeed: s.lastFeed });
+  const head = JSON.stringify({ archive: s.archive, feedSince: s.feedSince, lastFeed: s.lastFeed, feedReadAt: s.feedReadAt ?? null });
   const lines = keys.map((k) => `${JSON.stringify(k)}: ${JSON.stringify(s.cells[k])}`);
   return `{\n"meta": ${head},\n"cells": {\n${lines.join(",\n")}\n}\n}\n`;
 }

@@ -6,7 +6,7 @@ import { join } from "node:path";
 import { shallowClone } from "../lib/git.mjs";
 
 const REPO = "https://github.com/google-deepmind/formal-conjectures";
-export const VERSION = 3;
+export const VERSION = 4;
 
 /** Pure: a Lean file → [{ name, category }] for every declaration with a `category` attribute, in file order. */
 export function leanCategories(src) {
