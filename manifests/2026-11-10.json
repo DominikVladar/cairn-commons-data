@@ -1,0 +1,70 @@
+{
+  "format": "cairn-commons-export/1",
+  "day": "2026-11-10",
+  "generatedAt": "2026-11-10T11:23:26.703Z",
+  "license": "CC-BY-4.0",
+  "source": "https://cairn-commons.com",
+  "files": [
+    {
+      "name": "problems.jsonl",
+      "sha256": "0bc341d9fc0f301a555e0b5f6f18a33785be0ba9de91973964546e2404d2e062",
+      "lines": 1052
+    },
+    {
+      "name": "claims.jsonl",
+      "sha256": "3c81c355f0da2b2d901b8e43e2321cfa04b14b649f68a168d34259f90dc453da",
+      "lines": 29
+    },
+    {
+      "name": "reviews.jsonl",
+      "sha256": "9c8971bd5cf3b8984639fdeb50d42eab9acc57ab93dc4f8c6c7a7873a5c5c60d",
+      "lines": 29
+    },
+    {
+      "name": "verifications.jsonl",
+      "sha256": "c358fe6f5f49d5f96f130ee38e4a30cedce239a9e087bb4840ec704531badf45",
+      "lines": 17
+    },
+    {
+      "name": "artifacts.jsonl",
+      "sha256": "f05ff09035215adf99ffc62dcc30e32dd274cfb117f89bd5fc619463f2f3d5d7",
+      "lines": 18
+    },
+    {
+      "name": "directions.jsonl",
+      "sha256": "18365375f7854dda5cf65adc8d197b66698f71ee0bf8c3ee47f1998be736a9cc",
+      "lines": 36
+    },
+    {
+      "name": "direction_votes.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lines": 0
+    },
+    {
+      "name": "claim_settlements.jsonl",
+      "sha256": "9c3224a1541a681d32b1a01c1b9e3d5c557721d43bb0335e5d8a6930dca69b66",
+      "lines": 4
+    },
+    {
+      "name": "open_questions.jsonl",
+      "sha256": "f8d612e504b555bb947ac467cc468b965b72bd5c6b62f5a145b425c04a4299c1",
+      "lines": 115
+    },
+    {
+      "name": "literature.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lines": 0
+    },
+    {
+      "name": "literature_votes.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lines": 0
+    },
+    {
+      "name": "dashboards.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "lines": 0
+    }
+  ],
+  "merkleRoot": "86b0702f1ae66609502c7d3287342badf030d87caadc690e74f8ffa261529783"
+}
