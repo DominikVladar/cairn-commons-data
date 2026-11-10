@@ -1,42 +1,53 @@
 {
- "checkedAt": "2026-11-09T06:44:13.373Z",
+ "checkedAt": "2026-11-10T01:36:34.309Z",
  "sources": {
   "covering-repository": {
-   "blocked": true,
-   "error": "https://www.coveringrepository.com/systems.aspx?li=2: blocked by the site's bot protection (HTTP 403); not retried",
-   "failedAt": "2026-11-09T06:44:13.373Z",
-   "ok": false
+   "checkedAt": "2026-11-10T01:36:34.309Z",
+   "feed": {
+    "blocked": true,
+    "error": "https://www.coveringrepository.com/systems.aspx?li=2: blocked by the site's bot protection (HTTP 403); not retried",
+    "ok": false,
+    "readAt": null
+   },
+   "lastFeed": null,
+   "ok": true,
+   "parser": 2,
+   "rev": "19735294",
+   "rows": 9482,
+   "seconds": 3,
+   "warnings": [
+    "live improvements page not read: https://www.coveringrepository.com/systems.aspx?li=2: blocked by the site's bot protection (HTTP 403); not retried"
+   ]
   },
   "erdosproblems": {
-   "checkedAt": "2026-11-09T06:44:13.373Z",
+   "checkedAt": "2026-11-10T01:36:34.309Z",
    "ok": true,
    "parser": 1,
-   "rev": "acb2d48c137bbfb9dc73f941b08c4e3c90c70ba8",
+   "rev": "cda7dd1dbe089794eb1e9f4171edfc00ea0e5a90",
    "rows": 1221,
    "seconds": 1,
    "warnings": []
   },
   "formal-conjectures": {
-   "checkedAt": "2026-11-09T06:44:13.373Z",
+   "checkedAt": "2026-11-10T01:36:34.309Z",
    "ok": true,
-   "parser": 3,
-   "rev": "3afb9beda5bcb9933e6e10276e87f8ccfd851222",
+   "parser": 4,
+   "rev": "2f91d251c07fbbaf9435166d47c11e884a08a6cf",
    "rows": 756,
    "seconds": 1,
    "warnings": [
     "FormalConjectures/ErdosProblems/80.lean: Erdos80.erdos_80 not found among the categorised statements",
     "FormalConjectures/OEIS/185895.lean: OeisA185895.conjecture2 not found among the categorised statements",
-    "FormalConjectures/Paper/CardinalityLindelof.lean: CardinalityLindelof.HasG not found among the categorised statements",
     "FormalConjectures/Wikipedia/PolyTimeFunctions.lean: no longer in the repository (moved or removed)"
    ]
   },
   "optimization-constants": {
-   "checkedAt": "2026-11-09T06:44:13.373Z",
+   "checkedAt": "2026-11-10T01:36:34.309Z",
    "ok": true,
    "parser": 3,
    "rev": "87b4ebbd426ff8db597a2004cc45da17903bdcf2",
-   "rows": 107,
-   "seconds": 10,
+   "rows": 120,
+   "seconds": 11,
    "warnings": [
     "76a: no bounds table found"
    ]
