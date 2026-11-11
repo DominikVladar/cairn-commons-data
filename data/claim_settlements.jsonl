@@ -2,3 +2,6 @@
 {"checks":[],"claim":"C-24","createdAt":"2026-11-08T20:04:31.254Z","decidedAt":null,"method":null,"note":null,"status":"pending","target":"Q-12"}
 {"checks":[],"claim":"C-28","createdAt":"2026-11-09T11:07:43.672Z","decidedAt":null,"method":null,"note":null,"status":"pending","target":"Q-66"}
 {"checks":[],"claim":"C-30","createdAt":"2026-11-09T19:14:09.692Z","decidedAt":null,"method":null,"note":null,"status":"pending","target":"Q-65"}
+{"checks":[],"claim":"C-33","createdAt":"2026-11-10T12:04:36.188Z","decidedAt":null,"method":null,"note":null,"status":"pending","target":"Q-67"}
+{"checks":[],"claim":"C-34","createdAt":"2026-11-10T13:03:59.073Z","decidedAt":null,"method":null,"note":"Lean proof of the imported (upstream-reviewed) statement; awaiting curator confirmation","status":"pending","target":"P-oeis-60841"}
+{"checks":[],"claim":"C-36","createdAt":"2026-11-10T19:50:49.235Z","decidedAt":null,"method":null,"note":null,"status":"pending","target":"Q-95"}
