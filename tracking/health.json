@@ -1,8 +1,8 @@
 {
- "checkedAt": "2026-11-12T15:21:47.959Z",
+ "checkedAt": "2026-11-12T23:41:17.873Z",
  "sources": {
   "covering-repository": {
-   "checkedAt": "2026-11-12T15:21:47.959Z",
+   "checkedAt": "2026-11-12T23:41:17.873Z",
    "feed": {
     "blocked": true,
     "error": "https://www.coveringrepository.com/systems.aspx?li=2: blocked by the site's bot protection (HTTP 403); not retried",
@@ -20,30 +20,30 @@
    ]
   },
   "erdosproblems": {
-   "checkedAt": "2026-11-12T15:21:47.959Z",
+   "checkedAt": "2026-11-12T23:41:17.873Z",
    "ok": true,
    "parser": 1,
-   "rev": "255078e13d6a5591842a795e6529b346a1628654",
+   "rev": "641a78e3debdcbb2d53b936d3c4c7d9528c55a90",
    "rows": 1221,
    "seconds": 1,
    "warnings": []
   },
   "formal-conjectures": {
-   "checkedAt": "2026-11-12T15:21:47.959Z",
+   "checkedAt": "2026-11-12T23:41:17.873Z",
    "ok": true,
    "parser": 4,
-   "rev": "a425ca3eb797fe927cb88c950565fdcbbbbada70",
+   "rev": "04937a4cccadd0a205abdf2c706938c6c95e4177",
    "rows": 1044,
    "seconds": 1,
    "warnings": []
   },
   "optimization-constants": {
-   "checkedAt": "2026-11-12T15:21:47.959Z",
+   "checkedAt": "2026-11-12T23:41:17.873Z",
    "ok": true,
    "parser": 3,
    "rev": "87b4ebbd426ff8db597a2004cc45da17903bdcf2",
    "rows": 120,
-   "seconds": 12,
+   "seconds": 17,
    "warnings": [
     "76a: no bounds table found"
    ]
