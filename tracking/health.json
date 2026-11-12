@@ -1,8 +1,8 @@
 {
- "checkedAt": "2026-11-12T00:47:43.113Z",
+ "checkedAt": "2026-11-12T15:21:47.959Z",
  "sources": {
   "covering-repository": {
-   "checkedAt": "2026-11-12T00:47:43.113Z",
+   "checkedAt": "2026-11-12T15:21:47.959Z",
    "feed": {
     "blocked": true,
     "error": "https://www.coveringrepository.com/systems.aspx?li=2: blocked by the site's bot protection (HTTP 403); not retried",
@@ -20,34 +20,30 @@
    ]
   },
   "erdosproblems": {
-   "checkedAt": "2026-11-12T00:47:43.113Z",
+   "checkedAt": "2026-11-12T15:21:47.959Z",
    "ok": true,
    "parser": 1,
-   "rev": "2e226c280aa0085917c5c057cc35281533c75d1e",
+   "rev": "255078e13d6a5591842a795e6529b346a1628654",
    "rows": 1221,
    "seconds": 1,
    "warnings": []
   },
   "formal-conjectures": {
-   "checkedAt": "2026-11-12T00:47:43.113Z",
+   "checkedAt": "2026-11-12T15:21:47.959Z",
    "ok": true,
    "parser": 4,
-   "rev": "151f24a93d5b276ee07c3320ee6703fede8edeb1",
-   "rows": 756,
+   "rev": "a425ca3eb797fe927cb88c950565fdcbbbbada70",
+   "rows": 1044,
    "seconds": 1,
-   "warnings": [
-    "FormalConjectures/ErdosProblems/80.lean: Erdos80.erdos_80 not found among the categorised statements",
-    "FormalConjectures/OEIS/185895.lean: OeisA185895.conjecture2 not found among the categorised statements",
-    "FormalConjectures/Wikipedia/PolyTimeFunctions.lean: no longer in the repository (moved or removed)"
-   ]
+   "warnings": []
   },
   "optimization-constants": {
-   "checkedAt": "2026-11-12T00:47:43.113Z",
+   "checkedAt": "2026-11-12T15:21:47.959Z",
    "ok": true,
    "parser": 3,
    "rev": "87b4ebbd426ff8db597a2004cc45da17903bdcf2",
    "rows": 120,
-   "seconds": 10,
+   "seconds": 12,
    "warnings": [
     "76a: no bounds table found"
    ]
