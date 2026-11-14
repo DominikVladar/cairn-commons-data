@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "revision": 914,
+  "release": "sha256-placeholder",
+  "totals": { "results": 1104, "projects": 858 },
+  "entries": [
+    {
+      "abbreviated": false,
+      "abstract": "Fixture: the reciprocal of the determinant of the n by n matrix with entries 1/lcm(i,j) is an integer exactly for n = 1..34, 36 and 38.",
+      "authors": [{ "name": "Daniel Veljjanoski" }],
+      "classification": { "arxiv": ["math.NT"], "msc2020": ["11C20", "11A25", "15A15"] },
+      "formalization": { "theorem_names": ["OeisA60841.conjecture1"] },
+      "id": "PALOMAR-2026-11-10-000008",
+      "path": "entries/PALOMAR-2026-11-10-000008-v1.json",
+      "preservation": {
+        "repositories": [
+          {
+            "commit": "72400d30058c0a95e6c4c1c1e55557039f2daec7",
+            "fork_repository": "PalomarArchive/veljjanoski--oeis60841-palomar--617ba1cfdb3a",
+            "source_repository": "veljjanoski/oeis60841-palomar"
+          }
+        ]
+      },
+      "preview": { "artifact_tree_sha256": "708d97222b1483e7379ab55880428b8f76fe72fb4a334e9f380fe7c784016886", "version": 1 },
+      "published_at": "2026-11-10T13:25:46Z",
+      "source": { "commit": "72400d30058c0a95e6c4c1c1e55557039f2daec7", "project_path": null, "repository": "veljjanoski/oeis60841-palomar" },
+      "source_omitted": false,
+      "status": "registered",
+      "title": "OEIS A060841: 1/det(1/lcm(i,j)) is an integer exactly for n <= 34, n = 36 and n = 38",
+      "trust": { "level": "high" },
+      "version": 1,
+      "versions": 1
+    }
+  ],
+  "previous": null,
+  "next": null,
+  "dropped": [],
+  "message": null
+}

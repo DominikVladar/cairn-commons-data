@@ -6,6 +6,7 @@ import { applyFeed, cellsFromArchive, serializeCoveringState } from "../adapters
 import { parseCoveringGrid } from "../adapters/covering-parse.mjs";
 import { erdosStatuses } from "../adapters/erdos.mjs";
 import { leanCategories, mainStatement, summarize } from "../adapters/formal-conjectures.mjs";
+import { collectPalomar, palomarFacts } from "../adapters/palomar.mjs";
 import { trackingTargets } from "../lib/problems.mjs";
 import { canonical, cellValue } from "../lib/util.mjs";
 
@@ -104,4 +105,53 @@ test("which problem tracks which source, from the exported problem list", () => 
 
 test("canonical JSON sorts keys", () => {
   assert.equal(canonical({ b: 1, a: [{ d: 1, c: 2 }] }, 0), '{"a":[{"c":2,"d":1}],"b":1}\n');
+});
+
+test("palomar: a registered proof under a tracked theorem name becomes a fact, and a change when it is new", async () => {
+  const page = JSON.parse(fixture("palomar-results.json"));
+  const targets = trackingTargets([
+    { ref: "P-oeis-60841", formalStatement: "type_of% @OeisA60841.conjecture1", sources: [] },
+    { ref: "P-other", formalStatement: "type_of% @Other.statement", sources: [] },
+    { ref: "P-no-lean", sources: [] },
+  ]).palomar;
+  assert.deepEqual([...targets.keys()].sort(), ["OeisA60841.conjecture1", "Other.statement"]);
+  const facts = palomarFacts(page.entries, targets);
+  assert.equal(facts.length, 1);
+  assert.deepEqual(facts[0], {
+    problem: "P-oeis-60841",
+    source: "palomar",
+    key: "proof",
+    label: "Palomar: formal proof registered for `OeisA60841.conjecture1` (PALOMAR-2026-11-10-000008; trust high)",
+    value: "formal proof registered",
+    num: null,
+    holder: "Daniel Veljjanoski",
+    date: "2026-11-10",
+    url: "https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-10-000008",
+  });
+  // Entries that are not registered, or about other theorems, give nothing; the earliest entry wins.
+  const later = { ...page.entries[0], id: "PALOMAR-2026-12-01-000001", published_at: "2026-12-01T00:00:00Z", authors: [{ name: "Someone Else" }] };
+  const withdrawn = { ...page.entries[0], id: "PALOMAR-2026-01-01-000001", published_at: "2026-01-01T00:00:00Z", status: "withdrawn" };
+  const two = palomarFacts([later, withdrawn, ...page.entries], targets);
+  assert.equal(two[0].holder, "Daniel Veljjanoski");
+  assert.match(two[0].label, /and 1 more/);
+
+  // Paging follows `next`; the first run reports nothing as new, later runs report a proof for a problem that had none.
+  const pages = [{ entries: [later], next: "c1" }, { entries: page.entries, next: null, totals: { results: 2 } }];
+  const fetchPage = async (cursor) => pages[cursor ? 1 : 0];
+  const first = await collectPalomar(targets, { firstRun: true, fetchPage });
+  assert.equal(first.health.rows, 2);
+  assert.equal(first.events.length, 0);
+  const second = await collectPalomar(targets, { known: [], fetchPage });
+  assert.equal(second.events.length, 1);
+  assert.equal(second.events[0].to, "formal proof registered");
+  const third = await collectPalomar(targets, { known: second.facts, fetchPage });
+  assert.equal(third.events.length, 0);
+  // A registry that changes mid-read (HTTP 409) is read again from the start.
+  let calls = 0;
+  const flaky = async (cursor) => {
+    if (++calls === 2) throw new Error("https://data.palomar-registry.org/…: HTTP 409");
+    return pages[cursor ? 1 : 0];
+  };
+  assert.equal((await collectPalomar(targets, { fetchPage: flaky })).facts.length, 1);
+  await assert.rejects(collectPalomar(targets, { fetchPage: async () => ({ entries: [], next: null }) }), /no entries/);
 });

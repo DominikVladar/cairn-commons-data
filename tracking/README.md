@@ -11,8 +11,10 @@ facts, and every change is committed here with the run that saw it.
 | `optimization-constants` | best upper and lower bound with an explicit value, starred (unverified) or not, from [Tao's optimization constants](https://github.com/teorth/optimizationproblems) | problems linking a constant's page |
 | `formal-conjectures` | `@[category research open/solved]` of the Lean statement a problem is about, in [Formal Conjectures](https://github.com/google-deepmind/formal-conjectures) | problems linking a Formal Conjectures file |
 | `covering-repository` | best known (v,k,t) coverings: the [La Jolla archive on Zenodo](https://doi.org/10.5281/zenodo.10779736) as baseline, then the public "Latest (v,k,t) improvements" page of [coveringrepository.com](https://www.coveringrepository.com) on every run | problems linking coveringrepository.com |
+| `palomar` | entries of the [Palomar registry](https://palomar-registry.org) of machine-checked proofs (public API, CC0) whose theorem name is the Lean constant a problem's pinned statement names. One fact per problem, from the earliest registered entry. An entry proves its own copy of the statement, so the platform shows it and leaves the decision to a curator | problems with a pinned Lean statement |
 
-Which problem reads which source follows from the links in `data/problems.jsonl` (`tracking/lib/problems.mjs`).
+Which problem reads which source follows from the links and the pinned Lean statement in `data/problems.jsonl`
+(`tracking/lib/problems.mjs`).
 
 ## Files
 

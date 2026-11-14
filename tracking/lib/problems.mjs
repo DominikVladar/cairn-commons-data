@@ -10,7 +10,7 @@ export function loadProblems(path) {
 }
 
 export function trackingTargets(problems) {
-  const t = { erdos: new Map(), constants: new Map(), formalConjectures: new Map(), covering: [] };
+  const t = { erdos: new Map(), constants: new Map(), formalConjectures: new Map(), covering: [], palomar: new Map() };
   const add = (map, key, ref) => map.set(key, [...new Set([...(map.get(key) ?? []), ref])].sort());
   for (const p of problems) {
     for (const s of p.sources ?? []) {
@@ -30,6 +30,10 @@ export function trackingTargets(problems) {
       }
       if (/coveringrepository\.com/.test(u) && !t.covering.includes(p.ref)) t.covering.push(p.ref);
     }
+    // The Lean constant a problem's pinned statement names ("type_of% @Erdos10.erdos_10"): a proof registered in
+    // Palomar under that theorem name is about this problem.
+    const lean = /@([^\s()]+)/.exec(p.formalStatement ?? "")?.[1];
+    if (lean) add(t.palomar, lean, p.ref);
     // Erdős problems imported from Formal Conjectures are named P-erdos-<n>.
     const e = /^P-erdos-(\d+)$/.exec(p.ref);
     if (e) add(t.erdos, e[1], p.ref);

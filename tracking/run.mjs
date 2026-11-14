@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Collects the current state of tracked problems from public sources and records what changed.
 //
-//   node tracking/run.mjs [--only erdosproblems,optimization-constants,formal-conjectures,covering-repository]
+//   node tracking/run.mjs [--only erdosproblems,optimization-constants,formal-conjectures,covering-repository,palomar]
 //
 // Reads data/problems.jsonl (which problem links which source), writes tracking/facts.json (current facts per
 // problem), tracking/changes/<YYYY-MM>.jsonl (every change, appended), tracking/state/* (source state that later
@@ -16,6 +16,7 @@ import { collectErdos, VERSION as V_ERDOS } from "./adapters/erdos.mjs";
 import { collectConstants, VERSION as V_CONSTANTS } from "./adapters/constants.mjs";
 import { collectFormalConjectures, VERSION as V_FC } from "./adapters/formal-conjectures.mjs";
 import { collectCovering, serializeCoveringState, VERSION as V_COVERING } from "./adapters/covering.mjs";
+import { collectPalomar, VERSION as V_PALOMAR } from "./adapters/palomar.mjs";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, "..");
@@ -32,7 +33,7 @@ const prevFacts = readJson(join(HERE, "facts.json"), { facts: [] }).facts;
 const prevHealth = readJson(join(HERE, "health.json"), { sources: {} }).sources;
 
 /** Parser versions: when a parser changes, its first run re-reads everything without reporting changes. */
-const PARSER = { erdosproblems: V_ERDOS, "optimization-constants": V_CONSTANTS, "formal-conjectures": V_FC, "covering-repository": V_COVERING };
+const PARSER = { erdosproblems: V_ERDOS, "optimization-constants": V_CONSTANTS, "formal-conjectures": V_FC, "covering-repository": V_COVERING, palomar: V_PALOMAR };
 const SOURCES = {
   erdosproblems: () => collectErdos(targets.erdos),
   "optimization-constants": () => collectConstants(targets.constants),
@@ -44,6 +45,8 @@ const SOURCES = {
     writeIfChanged(statePath, serializeCoveringState(r.state));
     return r;
   },
+  palomar: () =>
+    collectPalomar(targets.palomar, { known: prevFacts.filter((f) => f.source === "palomar"), firstRun: !prevHealth.palomar }),
 };
 
 const factKey = (f) => `${f.problem}\u0000${f.source}\u0000${f.key}`;
