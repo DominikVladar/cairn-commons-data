@@ -1,8 +1,8 @@
 {
- "checkedAt": "2026-11-18T15:44:34.906Z",
+ "checkedAt": "2026-11-19T00:26:50.589Z",
  "sources": {
   "covering-repository": {
-   "checkedAt": "2026-11-18T15:44:34.906Z",
+   "checkedAt": "2026-11-19T00:26:50.589Z",
    "feed": {
     "blocked": true,
     "error": "https://www.coveringrepository.com/systems.aspx?li=2: blocked by the site's bot protection (HTTP 403); not retried",
@@ -14,13 +14,13 @@
    "parser": 2,
    "rev": "24119701",
    "rows": 9482,
-   "seconds": 19,
+   "seconds": 1,
    "warnings": [
     "live improvements page not read: https://www.coveringrepository.com/systems.aspx?li=2: blocked by the site's bot protection (HTTP 403); not retried"
    ]
   },
   "erdosproblems": {
-   "checkedAt": "2026-11-18T15:44:34.906Z",
+   "checkedAt": "2026-11-19T00:26:50.589Z",
    "ok": true,
    "parser": 1,
    "rev": "641a78e3debdcbb2d53b936d3c4c7d9528c55a90",
@@ -29,7 +29,7 @@
    "warnings": []
   },
   "formal-conjectures": {
-   "checkedAt": "2026-11-18T15:44:34.906Z",
+   "checkedAt": "2026-11-19T00:26:50.589Z",
    "ok": true,
    "parser": 4,
    "rev": "b576d527b271b936f9e61c0e367c302d7386bc80",
@@ -38,26 +38,26 @@
    "warnings": []
   },
   "optimization-constants": {
-   "checkedAt": "2026-11-18T15:44:34.906Z",
+   "checkedAt": "2026-11-19T00:26:50.589Z",
    "ok": true,
    "parser": 3,
    "rev": "87b4ebbd426ff8db597a2004cc45da17903bdcf2",
    "rows": 120,
-   "seconds": 15,
+   "seconds": 10,
    "warnings": [
     "76a: no bounds table found"
    ]
   },
   "palomar": {
-   "checkedAt": "2026-11-18T15:44:34.906Z",
+   "checkedAt": "2026-11-19T00:26:50.589Z",
    "ok": true,
    "parser": 1,
    "registry": {
-    "projects": 899,
-    "results": 1178
+    "projects": 900,
+    "results": 1179
    },
-   "rows": 1178,
-   "seconds": 5,
+   "rows": 1179,
+   "seconds": 3,
    "warnings": []
   }
  }
