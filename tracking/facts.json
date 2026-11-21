@@ -20576,6 +20576,17 @@
    "value": "1 open, 2 solved"
   },
   {
+   "date": "2026-11-21",
+   "holder": "Yan-cheng Lin",
+   "key": "proof",
+   "label": "Palomar: formal proof registered for `Gerstenhaber.finrank_adjoin_triple_le` (PALOMAR-2026-11-21-000010; trust high)",
+   "num": null,
+   "problem": "P-gerstenhaber-three-matrices",
+   "source": "palomar",
+   "url": "https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-21-000010",
+   "value": "formal proof registered"
+  },
+  {
    "date": null,
    "holder": null,
    "key": "main",
@@ -26064,6 +26075,17 @@
    "source": "formal-conjectures",
    "url": "https://github.com/google-deepmind/formal-conjectures/blob/d8d031d4998c78575159ccab9a7a9e95ce043883/FormalConjectures/OEIS/357513.lean",
    "value": "1 open, 1 solved"
+  },
+  {
+   "date": "2026-11-21",
+   "holder": "Felix Pernegger",
+   "key": "proof",
+   "label": "Palomar: formal proof registered for `OeisA357513.general_supercongruence` (PALOMAR-2026-11-21-000016; trust high)",
+   "num": null,
+   "problem": "P-oeis-357513",
+   "source": "palomar",
+   "url": "https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-21-000016",
+   "value": "formal proof registered"
   },
   {
    "date": null,
