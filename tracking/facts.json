@@ -1505,9 +1505,21 @@
   },
   {
    "date": null,
-   "holder": "[WXXZ2024] — Current best published lower bound.",
+   "holder": "[Var2026] — Characteristic zero.",
    "key": "15b-lower",
    "label": "Best lower bound with an explicit value (constant 15b)",
+   "num": 0.46652506,
+   "problem": "P-constant-15b-dual-matrix-multiplication-exponent",
+   "source": "optimization-constants",
+   "starred": true,
+   "url": "https://teorth.github.io/optimizationproblems/constants/15b.html",
+   "value": "0.46652506"
+  },
+  {
+   "date": null,
+   "holder": "[WXXZ2024] — Current best published lower bound.",
+   "key": "15b-lower-verified",
+   "label": "Best lower bound with an explicit value, independently verified (constant 15b)",
    "num": 0.321334,
    "problem": "P-constant-15b-dual-matrix-multiplication-exponent",
    "source": "optimization-constants",
@@ -1829,15 +1841,27 @@
   },
   {
    "date": null,
-   "holder": "[DE1998] — Based on lattice embeddings.",
+   "holder": "[V2026] — For all knots and links, thickness measured as a radius.",
    "key": "22a-lower",
    "label": "Best lower bound with an explicit value (constant 22a)",
-   "num": 0.418,
+   "num": 2.124,
+   "problem": "P-constant-22a-tight-knot-constant",
+   "source": "optimization-constants",
+   "starred": true,
+   "url": "https://teorth.github.io/optimizationproblems/constants/22a.html",
+   "value": "2.124"
+  },
+  {
+   "date": null,
+   "holder": "[DE2002] — For knots only (not links).",
+   "key": "22a-lower-verified",
+   "label": "Best lower bound with an explicit value, independently verified (constant 22a)",
+   "num": 1.647,
    "problem": "P-constant-22a-tight-knot-constant",
    "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/22a.html",
-   "value": "0.418"
+   "value": "1.647"
   },
   {
    "date": null,
@@ -2585,9 +2609,21 @@
   },
   {
    "date": null,
-   "holder": "[Baek2024] — Naive bound from C\\_41a",
+   "holder": "[Pat2026] — Hammersley-type argument using both turns.",
    "key": "41b-upper",
    "label": "Best upper bound with an explicit value (constant 41b)",
+   "num": 1.8284271,
+   "problem": "P-constant-41b-ambidextrous-moving-sofa-constant",
+   "source": "optimization-constants",
+   "starred": true,
+   "url": "https://teorth.github.io/optimizationproblems/constants/41b.html",
+   "value": "1.8284271"
+  },
+  {
+   "date": null,
+   "holder": "[Baek2024] — Naive bound from C\\_41a",
+   "key": "41b-upper-verified",
+   "label": "Best upper bound with an explicit value, independently verified (constant 41b)",
    "num": 2.2195,
    "problem": "P-constant-41b-ambidextrous-moving-sofa-constant",
    "source": "optimization-constants",
