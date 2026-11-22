@@ -860,39 +860,39 @@
   },
   {
    "date": null,
-   "holder": "[Skin2009] — Best recorded lower bound (as summarized in [BS2023]).",
+   "holder": "[P2026] — Candidate, unrefereed;",
    "key": "57c-lower",
    "label": "Best lower bound with an explicit value (constant 57c)",
-   "num": 0.5708858,
-   "problem": "P-bloch",
-   "source": "optimization-constants",
-   "starred": false,
-   "url": "https://teorth.github.io/optimizationproblems/constants/57c.html",
-   "value": "0.5708858"
-  },
-  {
-   "date": null,
-   "holder": "[vS2026] — Disc of radius R=5.001117628756668 minus 24 slits z= w, w= R+s+i(+b\\_1s^2+b\\_2s^4), (t/R)≤ s≤ 0, with (,t,b\\_1,b\\_2) equal to (0,1,0,0), (/3,1.9999999974092333,",
-   "key": "57c-upper",
-   "label": "Best upper bound with an explicit value (constant 57c)",
-   "num": 0.65628589,
+   "num": 0.6123,
    "problem": "P-bloch",
    "source": "optimization-constants",
    "starred": true,
    "url": "https://teorth.github.io/optimizationproblems/constants/57c.html",
-   "value": "0.65628589"
+   "value": "0.6123"
   },
   {
    "date": null,
-   "holder": "[COC2009] — Disc of radius 4.0546358 minus six radial slits and six harmonically symmetric arcs;",
-   "key": "57c-upper-verified",
-   "label": "Best upper bound with an explicit value, independently verified (constant 57c)",
-   "num": 0.6563937,
+   "holder": "[W2026] — Frank Wikström, Theorem 1.2;",
+   "key": "57c-lower-verified",
+   "label": "Best lower bound with an explicit value, independently verified (constant 57c)",
+   "num": 0.612242,
    "problem": "P-bloch",
    "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/57c.html",
-   "value": "0.6563937"
+   "value": "0.612242"
+  },
+  {
+   "date": null,
+   "holder": "[W2026] — Frank Wikström, Theorems 1.3 and 7.3: strict upper bound for the same univalent Bloch–Landau constant.",
+   "key": "57c-upper",
+   "label": "Best upper bound with an explicit value (constant 57c)",
+   "num": 0.6562681,
+   "problem": "P-bloch",
+   "source": "optimization-constants",
+   "starred": false,
+   "url": "https://teorth.github.io/optimizationproblems/constants/57c.html",
+   "value": "0.6562681"
   },
   {
    "date": null,
@@ -1217,9 +1217,21 @@
   },
   {
    "date": null,
-   "holder": "[SLXCKKM26] — Major jump over the Davie–Reeds anchor ≈ 1.67696;",
+   "holder": "[HJM2026] — Heilman, Jones and Malavolta, Theorem 4.1.",
    "key": "10a-lower",
    "label": "Best lower bound with an explicit value (constant 10a)",
+   "num": 1.773,
+   "problem": "P-constant-10a-the-real-grothendieck-constant",
+   "source": "optimization-constants",
+   "starred": true,
+   "url": "https://teorth.github.io/optimizationproblems/constants/10a.html",
+   "value": "1.773"
+  },
+  {
+   "date": null,
+   "holder": "[SLXCKKM26] — Major jump over the Davie–Reeds anchor ≈ 1.67696;",
+   "key": "10a-lower-verified",
+   "label": "Best lower bound with an explicit value, independently verified (constant 10a)",
    "num": 1.7136,
    "problem": "P-constant-10a-the-real-grothendieck-constant",
    "source": "optimization-constants",
@@ -1409,9 +1421,21 @@
   },
   {
    "date": null,
-   "holder": "[PW2021] — 30° circular sector of radius 1 (“Wetzel’s sector”).",
+   "holder": "[K2026] — Theorem 1.1 (a quadrilateral;",
    "key": "13a-upper",
    "label": "Best upper bound with an explicit value (constant 13a)",
+   "num": 0.2463322372,
+   "problem": "P-constant-13a-moser-s-convex-worm-cover-constant",
+   "source": "optimization-constants",
+   "starred": true,
+   "url": "https://teorth.github.io/optimizationproblems/constants/13a.html",
+   "value": "0.2463322372"
+  },
+  {
+   "date": null,
+   "holder": "[PW2021] — 30° circular sector of radius 1 (“Wetzel’s sector”).",
+   "key": "13a-upper-verified",
+   "label": "Best upper bound with an explicit value, independently verified (constant 13a)",
    "num": 0.2617993878,
    "problem": "P-constant-13a-moser-s-convex-worm-cover-constant",
    "source": "optimization-constants",
@@ -1421,9 +1445,21 @@
   },
   {
    "date": null,
-   "holder": "[BS2005] — Rigorous computer-aided search using a circle, equilateral triangle, and regular pentagon",
+   "holder": "[M2026] — Abstract: \"every convex universal cover has area at least 0.8344\".",
    "key": "13b-lower",
    "label": "Best lower bound with an explicit value (constant 13b)",
+   "num": 0.8344,
+   "problem": "P-constant-13b-lebesgue-universal-covering-constant",
+   "source": "optimization-constants",
+   "starred": true,
+   "url": "https://teorth.github.io/optimizationproblems/constants/13b.html",
+   "value": "0.8344"
+  },
+  {
+   "date": null,
+   "holder": "[BS2005] — Rigorous computer-aided search using a circle, equilateral triangle, and regular pentagon",
+   "key": "13b-lower-verified",
+   "label": "Best lower bound with an explicit value, independently verified (constant 13b)",
    "num": 0.832,
    "problem": "P-constant-13b-lebesgue-universal-covering-constant",
    "source": "optimization-constants",
@@ -1625,15 +1661,15 @@
   },
   {
    "date": null,
-   "holder": "[Lin2026] — GitHub repository with a Lean 4 formalization (`berryEsseenConstant ≤ 0.423`);",
+   "holder": "[KR2026] — Computer-assisted proof closing the upper bound to Esseen's constant c\\_E for all n ≥ 1: exact rational cubic-dual and Bernstein certificates for n=1 (150 cells",
    "key": "19a-upper",
    "label": "Best upper bound with an explicit value (constant 19a)",
-   "num": 0.423,
+   "num": 0.4097321837,
    "problem": "P-constant-19a-the-berry-esseen-constant",
    "source": "optimization-constants",
    "starred": true,
    "url": "https://teorth.github.io/optimizationproblems/constants/19a.html",
-   "value": "0.423"
+   "value": "0.4097321837"
   },
   {
    "date": null,
@@ -1691,21 +1727,9 @@
    "num": 0.4103333,
    "problem": "P-constant-1c-barnard-steinerberger-autocorrelation-constant",
    "source": "optimization-constants",
-   "starred": true,
-   "url": "https://teorth.github.io/optimizationproblems/constants/1c.html",
-   "value": "0.4103333"
-  },
-  {
-   "date": null,
-   "holder": "[R2026] — **Construction:** a step function f = \\_i w\\_i 1\\_[i/K,(i+1)/K) with K = 6144 and 6148 non-negative integer weights (support [0, 1.0005)).",
-   "key": "1c-lower-verified",
-   "label": "Best lower bound with an explicit value, independently verified (constant 1c)",
-   "num": 0.4103287,
-   "problem": "P-constant-1c-barnard-steinerberger-autocorrelation-constant",
-   "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/1c.html",
-   "value": "0.4103287"
+   "value": "0.4103333"
   },
   {
    "date": null,
@@ -1745,21 +1769,33 @@
   },
   {
    "date": null,
-   "holder": "[CERT2026] — Step function with 300 equal cells on [-1/4,1/4] and signed cell values v_0,,v_299.",
+   "holder": "[AER2026] — Step function with 600 equal cells on [-1/4,1/4], labelled C'\\_4 there.",
    "key": "1d-upper-verified",
    "label": "Best upper bound with an explicit value, independently verified (constant 1d)",
-   "num": 1.4630715826075593,
+   "num": 1.459989046905384,
    "problem": "P-constant-1d-the-signed-third-autocorrelation-constant",
    "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/1d.html",
-   "value": "1.4630715826075593"
+   "value": "1.459989046905384"
   },
   {
    "date": null,
    "holder": "[Pat2026] — n=1, X=E-1 with E a standard exponential variable: log-concave, mean 0, variance 1, and Var(X^2)=E(E-1)^4-1=9-1=8.",
    "key": "20a-lower",
    "label": "Best lower bound with an explicit value (constant 20a)",
+   "num": 8,
+   "problem": "P-constant-20a-the-thin-shell-conjecture-variance-of-x-2",
+   "source": "optimization-constants",
+   "starred": false,
+   "url": "https://teorth.github.io/optimizationproblems/constants/20a.html",
+   "value": "8"
+  },
+  {
+   "date": null,
+   "holder": "[CK2026] — Theorem 1.1 of [CK2026].",
+   "key": "20a-upper",
+   "label": "Best upper bound with an explicit value (constant 20a)",
    "num": 8,
    "problem": "P-constant-20a-the-thin-shell-conjecture-variance-of-x-2",
    "source": "optimization-constants",
@@ -1811,9 +1847,21 @@
    "num": 10.02,
    "problem": "P-constant-22a-tight-knot-constant",
    "source": "optimization-constants",
-   "starred": false,
+   "starred": true,
    "url": "https://teorth.github.io/optimizationproblems/constants/22a.html",
    "value": "10.02"
+  },
+  {
+   "date": null,
+   "holder": "[KM2021] — T(25,26) knot",
+   "key": "22a-upper-verified",
+   "label": "Best upper bound with an explicit value, independently verified (constant 22a)",
+   "num": 10.76,
+   "problem": "P-constant-22a-tight-knot-constant",
+   "source": "optimization-constants",
+   "starred": false,
+   "url": "https://teorth.github.io/optimizationproblems/constants/22a.html",
+   "value": "10.76"
   },
   {
    "date": null,
@@ -2099,9 +2147,21 @@
    "num": 0.7997,
    "problem": "P-constant-31a-chvatal-sankoff-constant-for-a-binary-alphabet",
    "source": "optimization-constants",
-   "starred": false,
+   "starred": true,
    "url": "https://teorth.github.io/optimizationproblems/constants/31a.html",
    "value": "0.7997"
+  },
+  {
+   "date": null,
+   "holder": "[H2024] — Computer assisted",
+   "key": "31a-lower-verified",
+   "label": "Best lower bound with an explicit value, independently verified (constant 31a)",
+   "num": 0.792665992,
+   "problem": "P-constant-31a-chvatal-sankoff-constant-for-a-binary-alphabet",
+   "source": "optimization-constants",
+   "starred": false,
+   "url": "https://teorth.github.io/optimizationproblems/constants/31a.html",
+   "value": "0.792665992"
   },
   {
    "date": null,
@@ -2111,21 +2171,9 @@
    "num": 0.82412,
    "problem": "P-constant-31a-chvatal-sankoff-constant-for-a-binary-alphabet",
    "source": "optimization-constants",
-   "starred": true,
-   "url": "https://teorth.github.io/optimizationproblems/constants/31a.html",
-   "value": "0.82412"
-  },
-  {
-   "date": null,
-   "holder": "[L2009] — Computer assisted",
-   "key": "31a-upper-verified",
-   "label": "Best upper bound with an explicit value, independently verified (constant 31a)",
-   "num": 0.82628,
-   "problem": "P-constant-31a-chvatal-sankoff-constant-for-a-binary-alphabet",
-   "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/31a.html",
-   "value": "0.82628"
+   "value": "0.82412"
   },
   {
    "date": null,
@@ -2213,15 +2261,15 @@
   },
   {
    "date": null,
-   "holder": "Folklore — See, e.g., [N2014]",
+   "holder": "[YL2026] — Abstract, with p\\_sil=\\_2(1+2): \"(n^-p\\_sil-O( n/ n)) non-anytime lower bound\".",
    "key": "35a-upper",
    "label": "Best upper bound with an explicit value (constant 35a)",
-   "num": 2,
+   "num": 1.2716,
    "problem": "P-constant-35a-gradient-descent-exponent",
    "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/35a.html",
-   "value": "2"
+   "value": "1.2716"
   },
   {
    "date": null,
@@ -2333,15 +2381,15 @@
   },
   {
    "date": null,
-   "holder": "[MI2026] — Base-33 digit construction with exact counting certificate.",
+   "holder": "[M2026] — Explicit finite construction at depth N = 10^13 on V = 2U in odd controlled-carry base q = 27995 1.1923025406835 (and 1.1922990483828 on the [K2026] mask B=1703",
    "key": "3a-lower-verified",
    "label": "Best lower bound with an explicit value, independently verified (constant 3a)",
-   "num": 1.1835129324,
+   "num": 1.19230254,
    "problem": "P-constant-3a-the-gyarmati-hennecart-ruzsa-sum-difference-constant",
    "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/3a.html",
-   "value": "1.1835129324"
+   "value": "1.19230254"
   },
   {
    "date": null,
@@ -2429,15 +2477,15 @@
   },
   {
    "date": null,
-   "holder": "[HRY1999] — The high-dimensional simplex A = \\\\(x\\_1,,x\\_N) Z\\_+^N : x\\_1 + + x\\_N ≤ N/2\\\\, projected to Z.",
+   "holder": "[M2026b] — Explicit finite carry-free projection to Z (in base Q = 2B + 1) of the two-temperature masked-digit simplex V\\_N = \\\\a M^N : \\_i=0^N-1 a\\_i ≤ L\\\\ of [O2026] on ",
    "key": "3e-lower",
    "label": "Best lower bound with an explicit value (constant 3e)",
-   "num": 1.2715,
+   "num": 1.27255802,
    "problem": "P-constant-3e-unnormalized-single-set-sum-difference-exponent",
    "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/3e.html",
-   "value": "1.2715"
+   "value": "1.27255802"
   },
   {
    "date": null,
@@ -2981,39 +3029,39 @@
   },
   {
    "date": null,
-   "holder": "[Skin2009] — Best recorded lower bound (as summarized in [BS2023]).",
+   "holder": "[P2026] — Candidate, unrefereed;",
    "key": "57c-lower",
    "label": "Best lower bound with an explicit value (constant 57c)",
-   "num": 0.5708858,
-   "problem": "P-constant-57c-univalent-bloch-constant",
-   "source": "optimization-constants",
-   "starred": false,
-   "url": "https://teorth.github.io/optimizationproblems/constants/57c.html",
-   "value": "0.5708858"
-  },
-  {
-   "date": null,
-   "holder": "[vS2026] — Disc of radius R=5.001117628756668 minus 24 slits z= w, w= R+s+i(+b\\_1s^2+b\\_2s^4), (t/R)≤ s≤ 0, with (,t,b\\_1,b\\_2) equal to (0,1,0,0), (/3,1.9999999974092333,",
-   "key": "57c-upper",
-   "label": "Best upper bound with an explicit value (constant 57c)",
-   "num": 0.65628589,
+   "num": 0.6123,
    "problem": "P-constant-57c-univalent-bloch-constant",
    "source": "optimization-constants",
    "starred": true,
    "url": "https://teorth.github.io/optimizationproblems/constants/57c.html",
-   "value": "0.65628589"
+   "value": "0.6123"
   },
   {
    "date": null,
-   "holder": "[COC2009] — Disc of radius 4.0546358 minus six radial slits and six harmonically symmetric arcs;",
-   "key": "57c-upper-verified",
-   "label": "Best upper bound with an explicit value, independently verified (constant 57c)",
-   "num": 0.6563937,
+   "holder": "[W2026] — Frank Wikström, Theorem 1.2;",
+   "key": "57c-lower-verified",
+   "label": "Best lower bound with an explicit value, independently verified (constant 57c)",
+   "num": 0.612242,
    "problem": "P-constant-57c-univalent-bloch-constant",
    "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/57c.html",
-   "value": "0.6563937"
+   "value": "0.612242"
+  },
+  {
+   "date": null,
+   "holder": "[W2026] — Frank Wikström, Theorems 1.3 and 7.3: strict upper bound for the same univalent Bloch–Landau constant.",
+   "key": "57c-upper",
+   "label": "Best upper bound with an explicit value (constant 57c)",
+   "num": 0.6562681,
+   "problem": "P-constant-57c-univalent-bloch-constant",
+   "source": "optimization-constants",
+   "starred": false,
+   "url": "https://teorth.github.io/optimizationproblems/constants/57c.html",
+   "value": "0.6562681"
   },
   {
    "date": null,
@@ -3041,9 +3089,21 @@
   },
   {
    "date": null,
-   "holder": "[P2026] — Set U=(1+z)(1-w), V=1+zw, P=LU+iTV, Q=LV+iTU, and f=(SQ-P)/(SQ+P), with L=2500000000, T=3067398171, and S=10^15.",
+   "holder": "[T2026] — f(z,w)=A+B(I-D)^-1C with =diag(z,w), the transfer function of an exactly unitary 3 3 colligation with blocks A,B,C,D and Gaussian-rational entries over a common",
    "key": "59a-upper",
    "label": "Best upper bound with an explicit value (constant 59a)",
+   "num": 0.302825279490988,
+   "problem": "P-constant-59a-bohr-radius-for-the-bidisc",
+   "source": "optimization-constants",
+   "starred": true,
+   "url": "https://teorth.github.io/optimizationproblems/constants/59a.html",
+   "value": "0.302825279490988"
+  },
+  {
+   "date": null,
+   "holder": "[P2026] — Set U=(1+z)(1-w), V=1+zw, P=LU+iTV, Q=LV+iTU, and f=(SQ-P)/(SQ+P), with L=2500000000, T=3067398171, and S=10^15.",
+   "key": "59a-upper-verified",
+   "label": "Best upper bound with an explicit value, independently verified (constant 59a)",
    "num": 0.302825279492,
    "problem": "P-constant-59a-bohr-radius-for-the-bidisc",
    "source": "optimization-constants",
@@ -3400,15 +3460,15 @@
   },
   {
    "date": null,
-   "holder": "Trivial geometric bound since all zeroes of f and f' lie in the closed unit disk.",
+   "holder": "L. Mazur; [Tao2026] — Proof of Sendov's conjecture for all n≥ 2 (in fact of the stronger Phelps–Rodriguez conjecture).",
    "key": "69a-upper",
    "label": "Best upper bound with an explicit value (constant 69a)",
-   "num": 2,
+   "num": 1,
    "problem": "P-constant-69a-sendov-radius-constant",
    "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/69a.html",
-   "value": "2"
+   "value": "1"
   },
   {
    "date": null,
@@ -3556,15 +3616,15 @@
   },
   {
    "date": null,
-   "holder": "[KSTZ2025] — Current best upper bound: Xu's m≤ 1.393(n-1) bound, as recorded in recent literature, gives C_78≤ 1.393.",
+   "holder": "[Sim2026] — Every thrackle on n≥ 4 vertices has at most 4(n-1)/3 edges, and t(n)≤ n for n≤ 3, hence C_78≤ 43.",
    "key": "78a-upper",
    "label": "Best upper bound with an explicit value (constant 78a)",
-   "num": 1.393,
+   "num": 1.3333333333333333,
    "problem": "P-constant-78a-conway-thrackle-constant",
    "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/78a.html",
-   "value": "1.393"
+   "value": "1.3333333333333333"
   },
   {
    "date": null,
@@ -3634,9 +3694,21 @@
    "num": 0.833,
    "problem": "P-constant-80a-ising-perceptron-capacity-threshold",
    "source": "optimization-constants",
-   "starred": false,
+   "starred": true,
    "url": "https://teorth.github.io/optimizationproblems/constants/80a.html",
    "value": "0.833"
+  },
+  {
+   "date": null,
+   "holder": "Trivial",
+   "key": "80a-lower-verified",
+   "label": "Best lower bound with an explicit value, independently verified (constant 80a)",
+   "num": 0,
+   "problem": "P-constant-80a-ising-perceptron-capacity-threshold",
+   "source": "optimization-constants",
+   "starred": false,
+   "url": "https://teorth.github.io/optimizationproblems/constants/80a.html",
+   "value": "0"
   },
   {
    "date": null,
@@ -3646,9 +3718,21 @@
    "num": 0.833,
    "problem": "P-constant-80a-ising-perceptron-capacity-threshold",
    "source": "optimization-constants",
-   "starred": false,
+   "starred": true,
    "url": "https://teorth.github.io/optimizationproblems/constants/80a.html",
    "value": "0.833"
+  },
+  {
+   "date": null,
+   "holder": "[AT2024] — Complete proof of the upper bound outlined earlier by Krauth–Mézard.",
+   "key": "80a-upper-verified",
+   "label": "Best upper bound with an explicit value, independently verified (constant 80a)",
+   "num": 0.847,
+   "problem": "P-constant-80a-ising-perceptron-capacity-threshold",
+   "source": "optimization-constants",
+   "starred": false,
+   "url": "https://teorth.github.io/optimizationproblems/constants/80a.html",
+   "value": "0.847"
   },
   {
    "date": null,
@@ -3694,21 +3778,9 @@
    "num": 0.2534449,
    "problem": "P-constant-82a-essential-minimum-of-the-zhang-zagier-height",
    "source": "optimization-constants",
-   "starred": true,
-   "url": "https://teorth.github.io/optimizationproblems/constants/82a.html",
-   "value": "0.2534449"
-  },
-  {
-   "date": null,
-   "holder": "[Gri26] — Computation based on Doche's polynomials",
-   "key": "82a-upper-verified",
-   "label": "Best upper bound with an explicit value, independently verified (constant 82a)",
-   "num": 0.2536331090204145,
-   "problem": "P-constant-82a-essential-minimum-of-the-zhang-zagier-height",
-   "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/82a.html",
-   "value": "0.2536331090204145"
+   "value": "0.2534449"
   },
   {
    "date": null,
@@ -3814,21 +3886,9 @@
    "num": 1.808499,
    "problem": "P-constant-86a-schur-siegel-smyth-trace-constant",
    "source": "optimization-constants",
-   "starred": true,
-   "url": "https://teorth.github.io/optimizationproblems/constants/86a.html",
-   "value": "1.808499"
-  },
-  {
-   "date": null,
-   "holder": "[SO24] — Explicit measures satisfying the conditions of [Smi24], optimized by gradient descent.",
-   "key": "86a-upper-verified",
-   "label": "Best upper bound with an explicit value, independently verified (constant 86a)",
-   "num": 1.8216,
-   "problem": "P-constant-86a-schur-siegel-smyth-trace-constant",
-   "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/86a.html",
-   "value": "1.8216"
+   "value": "1.808499"
   },
   {
    "date": null,
@@ -3922,21 +3982,9 @@
    "num": 0.0301388794,
    "problem": "P-constant-89a-ramsey-multiplicity-constant-of-k-4",
    "source": "optimization-constants",
-   "starred": true,
-   "url": "https://teorth.github.io/optimizationproblems/constants/89a.html",
-   "value": "0.0301388794"
-  },
-  {
-   "date": null,
-   "holder": "[EZL2015] — An iterated blow-up found inside Thomason's construction.",
-   "key": "89a-upper-verified",
-   "label": "Best upper bound with an explicit value, independently verified (constant 89a)",
-   "num": 0.030285,
-   "problem": "P-constant-89a-ramsey-multiplicity-constant-of-k-4",
-   "source": "optimization-constants",
    "starred": false,
    "url": "https://teorth.github.io/optimizationproblems/constants/89a.html",
-   "value": "0.030285"
+   "value": "0.0301388794"
   },
   {
    "date": null,
@@ -3952,9 +4000,21 @@
   },
   {
    "date": null,
-   "holder": "[BTY2026] — Bellotti–Trudgian–Yang: (+it) 0 for t≥ 3 and > 1 - 1/(4.896 t);",
+   "holder": "[OAI2026], [PT2021] — Deduced from the 7/8 quasi-Riemann hypothesis ([OAI2026], Theorem 1.1, which covers ) and the verification of RH up to height 3 10^12 ([PT2021]).",
    "key": "8a-upper",
    "label": "Best upper bound with an explicit value (constant 8a)",
+   "num": 0.755106,
+   "problem": "P-constant-8a-classical-zero-free-region-constant",
+   "source": "optimization-constants",
+   "starred": true,
+   "url": "https://teorth.github.io/optimizationproblems/constants/8a.html",
+   "value": "0.755106"
+  },
+  {
+   "date": null,
+   "holder": "[BTY2026] — Bellotti–Trudgian–Yang: (+it) 0 for t≥ 3 and > 1 - 1/(4.896 t);",
+   "key": "8a-upper-verified",
+   "label": "Best upper bound with an explicit value, independently verified (constant 8a)",
    "num": 4.896,
    "problem": "P-constant-8a-classical-zero-free-region-constant",
    "source": "optimization-constants",
@@ -3988,9 +4048,21 @@
   },
   {
    "date": null,
-   "holder": "[Tan2026] — Heterogeneous recursion;",
+   "holder": "[LT2026] — Independent set of size M (349 digits) in C\\_7^ 680: Tan's certified heterogeneous-Gao left patterns (N,G5>, N,sG15AX>, N,sG15Ah>, N,G5>, P10A) applied to new r",
    "key": "9a-lower",
    "label": "Best lower bound with an explicit value (constant 9a)",
+   "num": 3.258838705444608,
+   "problem": "P-constant-9a-shannon-capacity-of-the-7-cycle",
+   "source": "optimization-constants",
+   "starred": true,
+   "url": "https://teorth.github.io/optimizationproblems/constants/9a.html",
+   "value": "3.258838705444608"
+  },
+  {
+   "date": null,
+   "holder": "[Tan2026] — Heterogeneous recursion;",
+   "key": "9a-lower-verified",
+   "label": "Best lower bound with an explicit value, independently verified (constant 9a)",
    "num": 3.25883262,
    "problem": "P-constant-9a-shannon-capacity-of-the-7-cycle",
    "source": "optimization-constants",
@@ -5565,7 +5637,7 @@
    "value": "1 open, 0 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-16",
    "holder": null,
    "key": "erdos-108",
    "label": "Status of Erdős problem #108 on erdosproblems.com",
@@ -5573,7 +5645,7 @@
    "problem": "P-erdos-108",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/108",
-   "value": "open"
+   "value": "disproved"
   },
   {
    "date": null,
@@ -6544,7 +6616,7 @@
    "value": "1 open, 0 solved"
   },
   {
-   "date": "2026-01-23",
+   "date": "2026-10-26",
    "holder": null,
    "key": "erdos-1160",
    "label": "Status of Erdős problem #1160 on erdosproblems.com",
@@ -6552,7 +6624,7 @@
    "problem": "P-erdos-1160",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/1160",
-   "value": "open"
+   "value": "falsifiable"
   },
   {
    "date": null,
@@ -6632,7 +6704,7 @@
    "value": "4 open, 1 solved"
   },
   {
-   "date": "2026-01-23",
+   "date": "2026-10-26",
    "holder": null,
    "key": "erdos-1168",
    "label": "Status of Erdős problem #1168 on erdosproblems.com",
@@ -6640,7 +6712,7 @@
    "problem": "P-erdos-1168",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/1168",
-   "value": "open"
+   "value": "not disprovable"
   },
   {
    "date": null,
@@ -7556,7 +7628,7 @@
    "value": "1 open, 7 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-26",
    "holder": null,
    "key": "erdos-137",
    "label": "Status of Erdős problem #137 on erdosproblems.com",
@@ -7564,7 +7636,7 @@
    "problem": "P-erdos-137",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/137",
-   "value": "open"
+   "value": "verifiable"
   },
   {
    "date": null,
@@ -7688,7 +7760,7 @@
    "value": "4 open, 0 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-16",
    "holder": null,
    "key": "erdos-143",
    "label": "Status of Erdős problem #143 on erdosproblems.com",
@@ -7696,7 +7768,7 @@
    "problem": "P-erdos-143",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/143",
-   "value": "open"
+   "value": "solved"
   },
   {
    "date": null,
@@ -7787,7 +7859,7 @@
    "value": "1 open, 2 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-15",
    "holder": null,
    "key": "erdos-14",
    "label": "Status of Erdős problem #14 on erdosproblems.com",
@@ -7795,7 +7867,7 @@
    "problem": "P-erdos-14",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/14",
-   "value": "open"
+   "value": "solved"
   },
   {
    "date": null,
@@ -7809,7 +7881,7 @@
    "value": "2 open, 0 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-26",
    "holder": null,
    "key": "erdos-151",
    "label": "Status of Erdős problem #151 on erdosproblems.com",
@@ -7817,7 +7889,7 @@
    "problem": "P-erdos-151",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/151",
-   "value": "open"
+   "value": "falsifiable"
   },
   {
    "date": null,
@@ -8381,7 +8453,7 @@
    "value": "0 open, 1 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-16",
    "holder": null,
    "key": "erdos-184",
    "label": "Status of Erdős problem #184 on erdosproblems.com",
@@ -8389,7 +8461,7 @@
    "problem": "P-erdos-184",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/184",
-   "value": "open"
+   "value": "open (Lean)"
   },
   {
    "date": null,
@@ -8502,7 +8574,7 @@
    "value": "1 open, 2 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-20",
    "holder": null,
    "key": "erdos-196",
    "label": "Status of Erdős problem #196 on erdosproblems.com",
@@ -8510,7 +8582,7 @@
    "problem": "P-erdos-196",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/196",
-   "value": "open"
+   "value": "disproved"
   },
   {
    "date": null,
@@ -9778,7 +9850,7 @@
    "value": "1 open, 5 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-16",
    "holder": null,
    "key": "erdos-304",
    "label": "Status of Erdős problem #304 on erdosproblems.com",
@@ -9786,7 +9858,7 @@
    "problem": "P-erdos-304",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/304",
-   "value": "open"
+   "value": "proved"
   },
   {
    "date": null,
@@ -11340,7 +11412,7 @@
    "value": "1 open, 0 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-16",
    "holder": null,
    "key": "erdos-3",
    "label": "Status of Erdős problem #3 on erdosproblems.com",
@@ -11348,7 +11420,7 @@
    "problem": "P-erdos-3",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/3",
-   "value": "open"
+   "value": "open (Lean)"
   },
   {
    "date": null,
@@ -13916,7 +13988,7 @@
    "value": "1 open, 5 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-26",
    "holder": null,
    "key": "erdos-595",
    "label": "Status of Erdős problem #595 on erdosproblems.com",
@@ -13924,7 +13996,7 @@
    "problem": "P-erdos-595",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/595",
-   "value": "open"
+   "value": "not disprovable"
   },
   {
    "date": null,
@@ -14114,7 +14186,7 @@
    "value": "2 open, 1 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-26",
    "holder": null,
    "key": "erdos-601",
    "label": "Status of Erdős problem #601 on erdosproblems.com",
@@ -14122,7 +14194,7 @@
    "problem": "P-erdos-601",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/601",
-   "value": "open"
+   "value": "not provable"
   },
   {
    "date": null,
@@ -14389,7 +14461,7 @@
    "value": "1 open, 4 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-26",
    "holder": null,
    "key": "erdos-623",
    "label": "Status of Erdős problem #623 on erdosproblems.com",
@@ -14397,7 +14469,7 @@
    "problem": "P-erdos-623",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/623",
-   "value": "open"
+   "value": "independent"
   },
   {
    "date": null,
@@ -15269,7 +15341,7 @@
    "value": "1 open, 0 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-26",
    "holder": null,
    "key": "erdos-677",
    "label": "Status of Erdős problem #677 on erdosproblems.com",
@@ -15277,7 +15349,7 @@
    "problem": "P-erdos-677",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/677",
-   "value": "open"
+   "value": "falsifiable"
   },
   {
    "date": null,
@@ -15698,7 +15770,7 @@
    "value": "4 open, 2 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-26",
    "holder": null,
    "key": "erdos-701",
    "label": "Status of Erdős problem #701 on erdosproblems.com",
@@ -15706,7 +15778,7 @@
    "problem": "P-erdos-701",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/701",
-   "value": "open"
+   "value": "falsifiable"
   },
   {
    "date": null,
@@ -16270,7 +16342,7 @@
    "value": "1 open, 0 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-26",
    "holder": null,
    "key": "erdos-740",
    "label": "Status of Erdős problem #740 on erdosproblems.com",
@@ -16278,7 +16350,7 @@
    "problem": "P-erdos-740",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/740",
-   "value": "open"
+   "value": "not provable"
   },
   {
    "date": null,
@@ -17095,7 +17167,7 @@
    "value": "1 open, 2 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-15",
    "holder": null,
    "key": "erdos-81",
    "label": "Status of Erdős problem #81 on erdosproblems.com",
@@ -17103,7 +17175,7 @@
    "problem": "P-erdos-81",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/81",
-   "value": "open"
+   "value": "proved"
   },
   {
    "date": null,
@@ -17612,7 +17684,7 @@
    "value": "1 open, 0 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-26",
    "holder": null,
    "key": "erdos-850",
    "label": "Status of Erdős problem #850 on erdosproblems.com",
@@ -17620,7 +17692,7 @@
    "problem": "P-erdos-850",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/850",
-   "value": "open"
+   "value": "verifiable"
   },
   {
    "date": null,
@@ -17766,7 +17838,7 @@
    "value": "open"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-20",
    "holder": null,
    "key": "erdos-857",
    "label": "Status of Erdős problem #857 on erdosproblems.com",
@@ -17774,7 +17846,7 @@
    "problem": "P-erdos-856",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/857",
-   "value": "open"
+   "value": "proved"
   },
   {
    "date": null,
@@ -17799,7 +17871,7 @@
    "value": "1 open, 4 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-20",
    "holder": null,
    "key": "erdos-857",
    "label": "Status of Erdős problem #857 on erdosproblems.com",
@@ -17807,7 +17879,7 @@
    "problem": "P-erdos-857",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/857",
-   "value": "open"
+   "value": "proved"
   },
   {
    "date": null,
@@ -18745,7 +18817,7 @@
    "value": "2 open, 8 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-26",
    "holder": null,
    "key": "erdos-918",
    "label": "Status of Erdős problem #918 on erdosproblems.com",
@@ -18753,7 +18825,7 @@
    "problem": "P-erdos-918",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/918",
-   "value": "open"
+   "value": "not disprovable"
   },
   {
    "date": null,
@@ -19636,7 +19708,7 @@
    "value": "1 open, 2 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-16",
    "holder": null,
    "key": "erdos-96",
    "label": "Status of Erdős problem #96 on erdosproblems.com",
@@ -19644,7 +19716,7 @@
    "problem": "P-erdos-96",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/96",
-   "value": "open"
+   "value": "disproved"
   },
   {
    "date": null,
@@ -19878,7 +19950,7 @@
    "value": "1 open, 2 solved"
   },
   {
-   "date": "2025-08-31",
+   "date": "2026-10-16",
    "holder": null,
    "key": "erdos-97",
    "label": "Status of Erdős problem #97 on erdosproblems.com",
@@ -19886,7 +19958,7 @@
    "problem": "P-erdos-97",
    "source": "erdosproblems",
    "url": "https://www.erdosproblems.com/97",
-   "value": "falsifiable"
+   "value": "disproved"
   },
   {
    "date": null,
@@ -22744,9 +22816,21 @@
   },
   {
    "date": null,
-   "holder": "[PW2021] — 30° circular sector of radius 1 (“Wetzel’s sector”).",
+   "holder": "[K2026] — Theorem 1.1 (a quadrilateral;",
    "key": "13a-upper",
    "label": "Best upper bound with an explicit value (constant 13a)",
+   "num": 0.2463322372,
+   "problem": "P-moser-worm",
+   "source": "optimization-constants",
+   "starred": true,
+   "url": "https://teorth.github.io/optimizationproblems/constants/13a.html",
+   "value": "0.2463322372"
+  },
+  {
+   "date": null,
+   "holder": "[PW2021] — 30° circular sector of radius 1 (“Wetzel’s sector”).",
+   "key": "13a-upper-verified",
+   "label": "Best upper bound with an explicit value, independently verified (constant 13a)",
    "num": 0.2617993878,
    "problem": "P-moser-worm",
    "source": "optimization-constants",
@@ -24271,6 +24355,17 @@
    "source": "formal-conjectures",
    "url": "https://github.com/google-deepmind/formal-conjectures/blob/2207c54d0dbe960de591d280f997b195bf3f6e28/FormalConjectures/OEIS/189286.lean",
    "value": "1 open, 1 solved"
+  },
+  {
+   "date": "2026-11-22",
+   "holder": "Yuto Nakahara",
+   "key": "proof",
+   "label": "Palomar: formal proof registered for `OeisA189286.conjecture_3` (PALOMAR-2026-11-22-000013; trust high)",
+   "num": null,
+   "problem": "P-oeis-189286",
+   "source": "palomar",
+   "url": "https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-22-000013",
+   "value": "formal proof registered"
   },
   {
    "date": null,
