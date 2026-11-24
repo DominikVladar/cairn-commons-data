@@ -13,10 +13,13 @@ export function trackingTargets(problems) {
   const t = { erdos: new Map(), constants: new Map(), formalConjectures: new Map(), covering: [], palomar: new Map() };
   const add = (map, key, ref) => map.set(key, [...new Set([...(map.get(key) ?? []), ref])].sort());
   for (const p of problems) {
+    // An Erdős problem imported as P-erdos-<n> tracks erdosproblems.com/<n> only: its sources often link related
+    // Erdős problems ("see also #857"), whose status says nothing about this one.
+    const own = /^P-erdos-(\d+)$/.exec(p.ref)?.[1] ?? null;
     for (const s of p.sources ?? []) {
       const u = s.url ?? "";
       let m = /erdosproblems\.com\/(?:forum\/thread\/)?(\d+)(?:[/?#]|$)/.exec(u);
-      if (m) add(t.erdos, m[1], p.ref);
+      if (m && (own === null || m[1] === own)) add(t.erdos, m[1], p.ref);
       m = /teorth\.github\.io\/optimizationproblems\/constants\/(\d+[a-z])\.html/.exec(u);
       if (m) add(t.constants, m[1], p.ref);
       m = /github\.com\/google-deepmind\/formal-conjectures\/blob\/[0-9a-f]+\/(FormalConjectures\/[^#?]+\.lean)/.exec(u);

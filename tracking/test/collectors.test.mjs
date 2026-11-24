@@ -95,7 +95,11 @@ test("which problem tracks which source, from the exported problem list", () => 
     { ref: "P-erdos-10", formalStatement: "type_of% @Erdos10.erdos_10", sources: [{ url: "https://github.com/google-deepmind/formal-conjectures/blob/abc123/FormalConjectures/ErdosProblems/10.lean" }] },
     { ref: "P-erdos-minimum-overlap", sources: [{ url: "https://www.erdosproblems.com/36" }, { url: "https://teorth.github.io/optimizationproblems/constants/1b.html" }] },
     { ref: "P-covering-designs", sources: [{ url: "https://www.coveringrepository.com" }] },
+    // A related problem linked from an Erdős problem's sources is not tracked for it.
+    { ref: "P-erdos-856", sources: [{ url: "https://www.erdosproblems.com/856" }, { url: "https://www.erdosproblems.com/857" }] },
   ]);
+  assert.deepEqual(t.erdos.get("856"), ["P-erdos-856"]);
+  assert.equal(t.erdos.get("857"), undefined);
   assert.deepEqual(t.erdos.get("10"), ["P-erdos-10"]);
   assert.deepEqual(t.erdos.get("36"), ["P-erdos-minimum-overlap"]);
   assert.deepEqual(t.constants.get("1b"), ["P-erdos-minimum-overlap"]);
