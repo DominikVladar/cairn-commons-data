@@ -28794,6 +28794,17 @@
    "value": "3 open, 5 solved"
   },
   {
+   "date": "2026-11-27",
+   "holder": "n1ghtr1der365",
+   "key": "proof",
+   "label": "Palomar: formal proof registered for `VCDimConvex.hasAddVCNDimAtMost_two_two_of_convex_r3` (PALOMAR-2026-11-27-000053; trust high)",
+   "num": null,
+   "problem": "P-vc-dim-convex",
+   "source": "palomar",
+   "url": "https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-27-000053",
+   "value": "formal proof registered"
+  },
+  {
    "date": null,
    "holder": null,
    "key": "main",
@@ -29036,8 +29047,8 @@
    "value": "1 open, 0 solved"
   },
   {
-   "date": "2026-11-26",
-   "holder": "8xp4jtb47i5h",
+   "date": "2026-11-27",
+   "holder": "Alexander Wilms",
    "key": "proof",
    "label": "Palomar: formal proof registered for `WrittenOnTheWallII.GraphConjecture72.conjecture72` (PALOMAR-2026-11-26-000022; trust high)",
    "num": null,
